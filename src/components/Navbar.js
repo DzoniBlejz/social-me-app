@@ -20,20 +20,20 @@ const StyledToolBar = styled(Toolbar)({
 	justifyContent: "space-between",
 });
 
-const Search = styled("div")(({ theme }) => ({
+const Search = styled("div")(() => ({
 	backgroundColor: "white",
 	padding: "0 10px",
 	borderRadius: "10px",
 	width: "40%",
 }));
 
-const Icons = styled(Box)(({ theme }) => ({
+const Icons = styled(Box)(() => ({
 	display: "flex",
 	gap: "20px",
 	alignItems: "center",
 }));
 
-const UserBox = styled(Box)(({ theme }) => ({
+const UserBox = styled(Box)(() => ({
 	display: "flex",
 	gap: "10px",
 	alignItems: "center",

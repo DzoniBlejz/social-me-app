@@ -19,77 +19,81 @@ import {
 } from "@mui/icons-material";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
 	return (
 		<Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-			<List>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#home">
-						<ListItemIcon>
-							<HomeIcon></HomeIcon>
-						</ListItemIcon>
-						<ListItemText primary="Inbox" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#simple-list">
-						<ListItemIcon>
-							<Article />
-						</ListItemIcon>
-						<ListItemText primary="Pages" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#simple-list">
-						<ListItemIcon>
-							<Group />
-						</ListItemIcon>
-						<ListItemText primary="Groups" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#simple-list">
-						<ListItemIcon>
-							<Storefront />
-						</ListItemIcon>
-						<ListItemText primary="Marketplace" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#simple-list">
-						<ListItemIcon>
-							<Person />
-						</ListItemIcon>
-						<ListItemText primary="Friends" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#simple-list">
-						<ListItemIcon>
-							<Settings />
-						</ListItemIcon>
-						<ListItemText primary="Settings" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#simple-list">
-						<ListItemIcon>
-							<AccountBox />
-						</ListItemIcon>
-						<ListItemText primary="Profile" />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding></ListItem>
-				<ListItem disablePadding>
-					<ListItemButton component="a" href="#simple-list">
-						<ListItemIcon>
-							<ModeNightIcon />
-						</ListItemIcon>
-						<Switch />
-					</ListItemButton>
-				</ListItem>
-				<ListItem disablePadding></ListItem>
-			</List>
+			<Box position="fixed">
+				<List>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#home">
+							<ListItemIcon>
+								<HomeIcon></HomeIcon>
+							</ListItemIcon>
+							<ListItemText primary="Inbox" />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#simple-list">
+							<ListItemIcon>
+								<Article />
+							</ListItemIcon>
+							<ListItemText primary="Pages" />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#simple-list">
+							<ListItemIcon>
+								<Group />
+							</ListItemIcon>
+							<ListItemText primary="Groups" />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#simple-list">
+							<ListItemIcon>
+								<Storefront />
+							</ListItemIcon>
+							<ListItemText primary="Marketplace" />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#simple-list">
+							<ListItemIcon>
+								<Person />
+							</ListItemIcon>
+							<ListItemText primary="Friends" />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#simple-list">
+							<ListItemIcon>
+								<Settings />
+							</ListItemIcon>
+							<ListItemText primary="Settings" />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#simple-list">
+							<ListItemIcon>
+								<AccountBox />
+							</ListItemIcon>
+							<ListItemText primary="Profile" />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding></ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component="a" href="#simple-list">
+							<ListItemIcon>
+								<ModeNightIcon />
+							</ListItemIcon>
+							<Switch
+								onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+							/>
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding></ListItem>
+				</List>
+			</Box>
 		</Box>
 	);
 };
